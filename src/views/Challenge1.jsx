@@ -1,5 +1,7 @@
 //? Libraries
 import { Component } from 'react'
+//? Components
+import { AnimalList } from '../cmps/challenges/animals/AnimalList'
 
 export class Challenge1 extends Component {
   componentDidMount() {
@@ -10,6 +12,9 @@ export class Challenge1 extends Component {
     return (
       <section className="challenge-section">
         <h1> Challenge 1</h1>
+        <article className="challenge-section-article">
+          <AnimalList />
+        </article>
       </section>
     )
   }

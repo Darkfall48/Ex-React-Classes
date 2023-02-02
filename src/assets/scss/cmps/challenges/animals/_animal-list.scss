@@ -1,0 +1,29 @@
+.animals-table {
+  text-align: left;
+  border: aliceblue 2px solid;
+  background-color: $primary-color-2;
+  border-radius: 4px;
+  &-head {
+    @include h3;
+    & tr {
+      & th {
+        padding: 8px;
+      }
+    }
+  }
+
+  &-body {
+    &-animal {
+      @include body-1;
+      & td {
+        padding: 8px;
+      }
+      &-type {
+      }
+      &-count {
+      }
+      &-search-btn {
+      }
+    }
+  }
+}

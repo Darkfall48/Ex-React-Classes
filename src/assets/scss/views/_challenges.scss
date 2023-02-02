@@ -1,10 +1,15 @@
 .challenge-section {
   display: flex;
   flex-direction: column;
+  justify-items: center;
   gap: 18px;
   & h1 {
     text-align: center;
     @include h2;
+    color: $primary-color-3;
+  }
+
+  &-article {
     color: $primary-color-3;
   }
 }
