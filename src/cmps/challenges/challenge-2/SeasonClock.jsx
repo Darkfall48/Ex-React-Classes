@@ -12,6 +12,14 @@ export class SeasonClock extends Component {
 
   componentDidMount() {
     console.log('Season Clock - Loaded !')
+    this.interval = setInterval(
+      () => this.setState({ clock: new Date() }),
+      1000
+    )
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval)
   }
 
   //? Private Functions
@@ -44,6 +52,14 @@ export class SeasonClock extends Component {
     return <article className="season-clock-day">{currDay}</article>
   }
 
+  SetTime = () => {
+    const hour = this.state.clock.getHours()
+    const minute = this.state.clock.getMinutes()
+    return (
+      <article className="season-clock-time">{`${hour}:${minute}`}</article>
+    )
+  }
+
   render() {
     return (
       <section
@@ -54,6 +70,7 @@ export class SeasonClock extends Component {
         {this.SetSeasonTitle()}
         {this.SetSeasonImg()}
         {this.SetDay()}
+        {this.SetTime()}
       </section>
     )
   }
