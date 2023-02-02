@@ -1,14 +1,14 @@
 //? Libraries
 import { Component } from 'react'
 
-export class WatcherIndex extends Component {
+export class Challenge5 extends Component {
   componentDidMount() {
     console.log('Challenge 5 - Loaded !')
   }
 
   render() {
     return (
-      <section>
+      <section className="challenge-section">
         <h1> Challenge 5</h1>
       </section>
     )

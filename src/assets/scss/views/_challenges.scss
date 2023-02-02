@@ -1,0 +1,10 @@
+.challenge-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  & h1 {
+    text-align: center;
+    @include h2;
+    color: $primary-color-3;
+  }
+}
