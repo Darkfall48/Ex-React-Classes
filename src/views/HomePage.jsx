@@ -1,8 +1,7 @@
-
 export function HomePage() {
-    return (
-        <div>
-            <h1>Home!</h1>
-        </div>
-    )
+  return (
+    <section className="home-page">
+      <h1>Ex - React Classes</h1>
+    </section>
+  )
 }
