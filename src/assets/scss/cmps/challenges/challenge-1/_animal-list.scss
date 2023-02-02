@@ -2,6 +2,7 @@
   text-align: left;
   border: aliceblue 2px solid;
   background-color: $primary-color-2;
+  color: $secondary-color-4;
   border-radius: 4px;
   &-head {
     @include h3;

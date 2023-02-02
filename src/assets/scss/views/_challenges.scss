@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-items: center;
   gap: 18px;
+  padding-bottom: 40px;
   & h1 {
     text-align: center;
     @include h2;

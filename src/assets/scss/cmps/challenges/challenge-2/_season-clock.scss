@@ -1,0 +1,20 @@
+.season-clock {
+  background-color: rgb(37, 22, 109);
+  color: $primary-color-2;
+  width: 480px;
+  height: fit-content;
+  text-align: center;
+  padding: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  &.dark {
+    background-color: #333;
+    color: white;
+  }
+  &-title {
+    @include h2;
+  }
+  &-day {
+    @include h2;
+  }
+}

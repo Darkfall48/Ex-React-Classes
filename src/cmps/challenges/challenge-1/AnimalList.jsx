@@ -14,7 +14,7 @@ export class AnimalList extends Component {
   }
 
   //? Private Components
-  AnimalPreview() {
+  AnimalPreview = () => {
     return this.animalInfos.map((animal, idx) => {
       const { id, type, count } = animal
       return (

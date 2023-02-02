@@ -1,7 +1,7 @@
 //? Libraries
 import { Component } from 'react'
 //? Components
-import { AnimalList } from '../cmps/challenges/animals/AnimalList'
+import { AnimalList } from '../cmps/challenges/challenge-1/AnimalList'
 
 export class Challenge1 extends Component {
   componentDidMount() {

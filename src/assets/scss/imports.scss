@@ -19,7 +19,8 @@
 //* Components
 @import 'cmps/app-header';
 @import 'cmps/app-footer';
-@import 'cmps/challenges/animals/animal-list';
+@import 'cmps/challenges/challenge-1/animal-list';
+@import 'cmps/challenges/challenge-2/season-clock';
 @import 'cmps/nice-button';
 
 .main-app {
@@ -55,9 +56,4 @@
     bottom: 10px;
     left: 10px;
   }
-}
-
-.dark {
-  background-color: #333;
-  color: white;
 }
