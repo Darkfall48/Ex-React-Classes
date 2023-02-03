@@ -1,6 +1,9 @@
 //? Libraries
 import { Component } from 'react'
+//? Services
 import { utilService } from '../../../services/util.service'
+//? Icons
+import { MdSavedSearch } from 'react-icons/md'
 
 export class AnimalList extends Component {
   animalInfos = [
@@ -28,7 +31,7 @@ export class AnimalList extends Component {
               rel="noopener noreferrer"
               title={`Search ${type} on Google`}
             >
-              Search
+              <MdSavedSearch />
             </a>
           </td>
         </tr>
