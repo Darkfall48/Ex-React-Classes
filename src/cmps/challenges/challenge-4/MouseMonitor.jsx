@@ -14,6 +14,7 @@ export class MouseMonitor extends Component {
     document.removeEventListener('mousemove', this.handleMouseMove)
   }
 
+  //? Private Functions
   handleMouseMove = (event) => {
     this.setState({
       pos: { x: event.clientX, y: event.clientY },
@@ -35,26 +36,39 @@ export class MouseMonitor extends Component {
     )
   }
 
-  render() {
-    const { pos, isOn } = this.state
+  //? Private Components
+  SetMousePos = () => {
+    const { pos } = this.state
+    return (
+      <div className="mouse-monitor-pos">
+        <h2 className="mouse-monitor-pos-x">
+          X: <span>{pos.x}</span>
+        </h2>
+        <h2 className="mouse-monitor-pos-y">
+          Y: <span>{pos.y}</span>
+        </h2>
+      </div>
+    )
+  }
 
+  ToggleBtn = () => {
+    const { isOn } = this.state
+    return (
+      <button
+        className="mouse-monitor-toggle-btn nice-button"
+        onClick={this.handleToggle}
+      >
+        {isOn ? 'Pause' : 'Resume'}
+      </button>
+    )
+  }
+
+  render() {
     return (
       <article className={`mouse-monitor`}>
         <h1 className="mouse-monitor-title">Mouse Position</h1>
-        <div className="mouse-monitor-pos">
-          <h2 className="mouse-monitor-pos-x">
-            X: <span>{pos.x}</span>
-          </h2>
-          <h2 className="mouse-monitor-pos-y">
-            Y: <span>{pos.y}</span>
-          </h2>
-        </div>
-        <button
-          className="mouse-monitor-toggle-btn nice-button"
-          onClick={this.handleToggle}
-        >
-          {isOn ? 'Pause' : 'Resume'}
-        </button>
+        {this.SetMousePos()}
+        {this.ToggleBtn()}
       </article>
     )
   }
