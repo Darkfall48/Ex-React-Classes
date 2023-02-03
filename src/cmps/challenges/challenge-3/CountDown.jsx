@@ -12,12 +12,12 @@ export class CountDown extends Component {
     isStarted: false,
     counter: 10,
     startedCounter: null,
-    toTime: Date.now() + 1000 * 10,
+    // toTime: Date.now() + 1000 * 10,
   }
 
   componentDidMount() {
     console.log('Count Down - Loaded !')
-    const audioFile = require('./timer.ogg')
+    const audioFile = require('../../../../src/assets/audio/timer/timer.mp3')
     const audio = new Howl({
       src: [audioFile],
     })
@@ -55,6 +55,39 @@ export class CountDown extends Component {
     this.setState({ counter: 0 })
   }
 
+  //? Private Components
+  StartBtn = () => {
+    return (
+      <button
+        className="count-down-start-btn nice-button"
+        onClick={this.onStartTimer}
+      >
+        Start
+      </button>
+    )
+  }
+
+  PauseBtn = () => {
+    return (
+      <button
+        className="count-down-pause-btn nice-button"
+        onClick={this.onClearInterval}
+      >
+        Pause
+      </button>
+    )
+  }
+
+  ResetBtn = () => {
+    return (
+      <button
+        className="count-down-reset-btn nice-button"
+        onClick={this.onResetTimer}
+      >
+        Reset
+      </button>
+    )
+  }
   render() {
     return (
       <section className="count-down">
@@ -63,24 +96,9 @@ export class CountDown extends Component {
           //   toTime={Date.now() + 1000 * 10}
           onDone={this.onDone}
         />
-        <button
-          className="count-down-start-btn nice-button"
-          onClick={this.onStartTimer}
-        >
-          Start
-        </button>
-        <button
-          className="count-down-pause-btn nice-button"
-          onClick={this.onClearInterval}
-        >
-          Pause
-        </button>
-        <button
-          className="count-down-reset-btn nice-button"
-          onClick={this.onResetTimer}
-        >
-          Reset
-        </button>
+        {this.StartBtn()}
+        {this.PauseBtn()}
+        {this.ResetBtn()}
       </section>
     )
   }
