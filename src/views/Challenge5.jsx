@@ -11,6 +11,7 @@ export class Challenge5 extends Component {
     return (
       <section className="challenge-section">
         <h1> Challenge 5</h1>
+        <article className="challenge-section-article"></article>
       </section>
     )
   }

@@ -12,7 +12,9 @@ export class Challenge2 extends Component {
     return (
       <section className="challenge-section">
         <h1> Challenge 2</h1>
-        <SeasonClock />
+        <article className="challenge-section-article">
+          <SeasonClock />
+        </article>
       </section>
     )
   }

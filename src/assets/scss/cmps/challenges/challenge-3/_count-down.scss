@@ -1,0 +1,31 @@
+.count-down {
+  background-color: $primary-color-2;
+  border-radius: 4px;
+  padding: 18px;
+  align-items: center;
+  &-timer {
+    color: $secondary-color-7;
+    &.red {
+      color: rgb(216, 71, 71);
+    }
+    &.blink {
+      animation: blinker 1s linear infinite;
+    }
+    @include h2;
+    text-align: center;
+    padding-bottom: 18px;
+  }
+  &-start-btn {
+  }
+  &-pause-btn {
+  }
+  &-reset-btn {
+    margin-right: 0 !important;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.6;
+  }
+}
